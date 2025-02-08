@@ -65,7 +65,7 @@ class Application(tornado.web.Application):
         handlers = [
             (r'/sendTrans/(.*)', TransHandler),
             (r'/query_info/(.*)', QueryHandler),
-            (r"/", tornado.web.RedirectHandler, {"url": "/index.html"}),
+            (r"/", tornado.web.RedirectHandler, {"url": "/static/index.html"}),
         ]
 
         settings = dict(
