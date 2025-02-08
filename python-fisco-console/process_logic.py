@@ -47,11 +47,34 @@ def get_to_address():
     print("new address : ", result["contractAddress"])
     contract_name = os.path.splitext(os.path.basename(abi_file))[0]
 
-    # todo 可以放入缓存中 以合约名为key，不需要每次重启都部署合约，每次部署合约会添加一次交易。
     to_address = result['contractAddress'] #use new deploy address
     # to_address = "0xcda895ec53a73fbc3777648cb4c87b38e252f876" #use new deploy address
-    return to_address, contract_abi
+    return to_address, contract_abi, result
 
+def check_contract():
+    """
+    通过 json文件 ，检查合约是否已经部署过，如果没有，则部署一次并生成json文件
+    :return:
+    """
+    if os.path.isfile('contracts.json'):
+        with open('contracts.json', 'r') as load_f:
+            load_data = json.load(load_f)
+            to_address, contract_abi, result = load_data['to_address'], load_data['contract_abi'], load_data['result']
+        try:
+            get_transaction_detail_data(result['transactionHash'])
+        except Exception:
+            print("\n>>check fail")
+            os.remove('contracts.json')
+            check_contract()
+    else:
+        to_address, contract_abi, result = get_to_address()
+        with open('contracts.json', 'w') as save_f:
+            json.dump({
+                'to_address': to_address,
+                'contract_abi': contract_abi,
+                'result': result,
+            }, save_f)
+    return to_address, contract_abi
 
 def get_one_block(res):
     number = int(res.get("number"), 16)
@@ -293,7 +316,6 @@ def get_block_detail_data(blockHash):
 
 
 def send_transaction_get_txhash(requestData):
-    to_address, contract_abi = get_to_address()
     # requestData = json.loads(request.get_data().decode())
     hash = hashlib.sha1()
     hash.update(json.dumps(requestData, ensure_ascii=False).encode('utf-8'))
@@ -306,3 +328,5 @@ def send_transaction_get_txhash(requestData):
     txhash = receipt['transactionHash']
     # print("receipt:",receipt)
     return txhash
+
+to_address, contract_abi = check_contract()
