@@ -1,16 +1,12 @@
 # FiscoBcos-PyConsole
-FiscoBcos 的区块链浏览器
+FiscoBcos 的区块链浏览器，自带上链以及查询 rest-api 
 
 ### 简介
-基于python-sdk开发的区块链浏览器，页面参考原始的区块链浏览器
+基于python-sdk开发的区块链浏览器，自带 restFul API 接口，无须 Java、MySQL
 ```
 https://github.com/FISCO-BCOS/fisco-bcos-browser.git
 ```
-点击进入原始 [区块链浏览器](https://github.com/FISCO-BCOS/fisco-bcos-browser.git)
 
-本工程只需要Python3.5 + 即可
-
-原始工程需要Python2.7, Java, 以及MySQL.因此进行了简化,不需要任何数据库
 
 #### 项目效果
 首页
@@ -21,30 +17,23 @@ https://github.com/FISCO-BCOS/fisco-bcos-browser.git
 
 ![首页截图](https://github.com/Wall-ee/FiscoBcos-PyConsole/blob/master/transaction_detail.png)
 
-### 环境要求
-1. Fisco Bcos 网络配置完毕
-2. Python3.5+
-3. Flask/Tornado安装
-4. 安装Fisco Bcos 的Python-SDK
+
+
+### 使用 docker 快速运行
+
+```shell
+docker run -p 5555:5555 -d --mount type=volume,source=fisco,target=/root/fisco fisco_webserve
 ```
-https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/python_sdk/install.html
+
+主页访问地址: http://ip:5555/index.html
+
+通过 API 接口上链一条数据
+```shell
+curl --location 'http://127.0.0.1:5555/sendTrans/rawTrans' \
+--header 'Content-Type: application/json' \
+--data '{"data": "cross the world"}'
 ```
-点击进入[Python SDK](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/python_sdk/install.html)
 
-轻量级Python的Http服务器--Flask [官方文档](https://flask.palletsprojects.com/en/master/)
-
-高性能异步非阻塞Python服务器(FaceBook开源)--Tornado [官方文档](http://www.tornadoweb.org/en/stable/)
-### 使用方法
-
-1. 安装Fisco Bcos的python-sdk，python-sdk配置规则参照官方教程；
-
-2. 将python-fisco-consle下面的所有文件与文件夹一并复制放入python-sdk根目录。其中包括static静态页面目录，以及flask和tornado 的启动文件；
-
-3. 启动fisco_browser_flask.py 或 fisco_browser_tornado.py 则分别启动flask/tornado 的工程；
-
-4. flask主页访问地址: http:ip:5555/index.html
-
-   tornado主页访问地址: http:ip:5555 或 http:ip:5555/static/index.html
 
 ### 区块链浏览器的api详解：
 
@@ -55,7 +44,7 @@ https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/python_sdk
 5. 每次部署合约都会生成一个区块，区块内包含一个交易。
 
 
-### API详解：
+### API 接口：
 
 >GET 查询api：
 
@@ -72,3 +61,12 @@ https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/python_sdk
 >POST 上传交易api：
 
 /sendTrans/rawTrans   上传json格式数据，发送交易上链 
+
+
+### 开发原理
+
+1. 安装Fisco Bcos的python-sdk，python-sdk配置规则参照官方教程；
+
+2. 将python-fisco-consle下面的所有文件与文件夹一并复制放入python-sdk根目录。其中包括static静态页面目录，以及flask和tornado 的启动文件；
+
+3. 启动fisco_browser_flask.py 或 fisco_browser_tornado.py 则分别启动flask/tornado 的工程；

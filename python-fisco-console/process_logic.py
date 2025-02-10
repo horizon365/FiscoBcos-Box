@@ -56,19 +56,20 @@ def check_contract():
     通过 json文件 ，检查合约是否已经部署过，如果没有，则部署一次并生成json文件
     :return:
     """
-    if os.path.isfile('contracts.json'):
-        with open('contracts.json', 'r') as load_f:
+    file_path = '/root/fisco/nodes/contracts.json'
+    if os.path.isfile(file_path):
+        with open(file_path, 'r') as load_f:
             load_data = json.load(load_f)
             to_address, contract_abi, result = load_data['to_address'], load_data['contract_abi'], load_data['result']
         try:
             get_transaction_detail_data(result['transactionHash'])
         except Exception:
             print("\n>>check fail")
-            os.remove('contracts.json')
+            os.remove(file_path)
             check_contract()
     else:
         to_address, contract_abi, result = get_to_address()
-        with open('contracts.json', 'w') as save_f:
+        with open(file_path, 'w') as save_f:
             json.dump({
                 'to_address': to_address,
                 'contract_abi': contract_abi,
