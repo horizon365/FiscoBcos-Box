@@ -11,11 +11,11 @@ https://github.com/FISCO-BCOS/fisco-bcos-browser.git
 #### 项目效果
 首页
 
-![首页截图](https://github.com/Wall-ee/FiscoBcos-Box/blob/master/index.png)
+![首页截图](https://github.com/horizon365/FiscoBcos-Box/blob/master/index.png)
 
 交易详情
 
-![首页截图](https://github.com/Wall-ee/FiscoBcos-Box/blob/master/transaction_detail.png)
+![首页截图](https://github.com/horizon365/FiscoBcos-Box/blob/master/transaction_detail.png)
 
 
 
