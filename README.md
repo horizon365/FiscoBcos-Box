@@ -1,8 +1,8 @@
-# FiscoBcos-PyConsole
-FiscoBcos 的区块链浏览器，自带上链以及查询 rest-api 
+# FiscoBcos-Box
+FiscoBcos 的区块链盒子，包含 WEB 查看页面， 以及 restFul API
 
 ### 简介
-基于python-sdk开发的区块链浏览器，自带 restFul API 接口，无须 Java、MySQL
+基于FiscoBcos python-sdk 开发的区块链浏览器，自带 restFul API 接口，无须 Java、MySQL
 ```
 https://github.com/FISCO-BCOS/fisco-bcos-browser.git
 ```
@@ -11,18 +11,18 @@ https://github.com/FISCO-BCOS/fisco-bcos-browser.git
 #### 项目效果
 首页
 
-![首页截图](https://github.com/Wall-ee/FiscoBcos-PyConsole/blob/master/index.png)
+![首页截图](https://github.com/Wall-ee/FiscoBcos-Box/blob/master/index.png)
 
 交易详情
 
-![首页截图](https://github.com/Wall-ee/FiscoBcos-PyConsole/blob/master/transaction_detail.png)
+![首页截图](https://github.com/Wall-ee/FiscoBcos-Box/blob/master/transaction_detail.png)
 
 
 
 ### 使用 docker 快速运行
 
 ```shell
-docker run -p 5555:5555 -d --mount type=volume,source=fisco,target=/root/fisco fisco_webserve
+docker run -p 5555:5555 -d --mount type=volume,source=fisco,target=/root/fisco shujuliuer/fisco_box
 ```
 
 主页访问地址: http://ip:5555/index.html
