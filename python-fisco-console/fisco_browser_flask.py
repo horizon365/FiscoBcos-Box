@@ -7,7 +7,8 @@ from process_logic import (
     get_transaction_detail_data,
     send_transaction_get_txhash,
     get_block_detail_data,
-    get_data_parser
+    get_data_parser,
+    get_summary_data
 )
 
 app = Flask(__name__,
@@ -66,6 +67,13 @@ def send_transaction():
     txhash = send_transaction_get_txhash(requestData)
     # print("receipt:",receipt)
     return txhash
+
+# 获取区块以及交易的混合信息
+@app.route('/query_info/get_summary_data', methods=['GET'])
+def get_transaction():
+    transactionHash = request.args.get('transactionHash', '')
+    data = get_summary_data(transactionHash)
+    return json.dumps(data)
 
 
 if __name__ == "__main__":

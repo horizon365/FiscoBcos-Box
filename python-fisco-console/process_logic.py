@@ -284,6 +284,62 @@ def get_transaction_list_data(blockNumber, transactionHash, page):
         }
     return result
 
+def get_block_hash(blockNumber, blockHash):
+    block_hash = number = add_time = transaction_number ='--'
+    try:
+        block_list = get_block_list_data(blockNumber, blockHash, '')['block_list']
+    except:
+        pass
+    else:
+        block_hash = block_list[0]['block_hash']
+        number = block_list[0]['number']
+        add_time = block_list[0]['add_time']
+        transaction_number = block_list[0]['transaction_num']
+    return block_hash, number, add_time, transaction_number
+
+def get_summary_data(transactionHash):
+    """
+返回值为：
+区块信息
+    当前区块（Current block）
+    当前区块交易数量（Current block transactions）
+    区块哈希值（Block hash）
+    前一个区块哈希（Previous block hash）
+    后一个区块哈希（Latter block hash）
+    区块创建时间（Block creation time）
+交易信息
+    交易哈希值（Transaction hash）
+    发送者（from）：加密
+    接收者（to）：加密
+    输入信息（Input）：加密
+    交易创建时间（Transaction create time）
+
+"""
+    transaction_detail = get_transaction_detail_data(transactionHash)
+    receipt = transaction_detail['transactionReceipt']
+    block_hash = receipt['blockHash']
+    block_detail = get_block_detail_data(block_hash)
+    _, block_number, add_time, transaction_number = get_block_hash('', block_hash)
+
+    data = {
+        'block' : {
+            'blockNumber': block_number,
+            'transactionNumber': transaction_number,
+            'blockHash': block_hash,
+            'parentHash': block_detail['parentHash'],
+            'childHash': get_block_hash(block_number+1, '')[0],
+            'time': add_time,
+
+        },
+        'transaction' : {
+            'transactionHash': transactionHash,
+            'from': receipt['from'],
+            'to': receipt['to'],
+            'input': receipt['input'],
+            'time': get_transaction_list_data('',transactionHash, '')['transaction_list'][0]['time'],
+        }
+    }
+    return data
 
 def get_transaction_detail_data(transactionHash):
     # transactionHash = request.args.get('transactionHash', '')
