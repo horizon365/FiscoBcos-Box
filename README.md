@@ -58,6 +58,9 @@ curl --location 'http://127.0.0.1:5555/sendTrans/rawTrans' \
 
 /query_info/transaction_detail   根据交易哈希，获取交易详情和交易回执
 
+/query_info/get_summary_data   根据交易哈希，获取区块详情（包括上一区块、下一区块）和交易详情
+
+
 >POST 上传交易api：
 
 /sendTrans/rawTrans   上传json格式数据，发送交易上链 
