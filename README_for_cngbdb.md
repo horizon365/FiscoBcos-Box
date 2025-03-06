@@ -1,0 +1,20 @@
+Nginx 配置：  
+```nginx configuration
+location /fisco/api/ {
+proxy_pass http://127.0.0.1:9518/;
+more_clear_headers 'Cache-Control';
+more_set_headers 'Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0';
+}
+
+```
+
+
+# 手动打包docker
+docker build --platform linux/amd64 -t harbor.cngb.org/cngbdb/fisco_box .
+
+# 运行docker
+docker run -p 9518:5555 -d --mount type=volume,source=fisco,target=/root/fisco --name fisco harbor.cngb.org/cngbdb/fisco_box:0306
+# 修改js中的硬地址,用来匹配nginx代理配置
+docker exec -it fisco sed -i 's/url: "/url: "\/fisco\/api/g' /python-sdk/static/js/*.js
+
+
