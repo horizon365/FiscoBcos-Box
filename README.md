@@ -27,6 +27,10 @@ docker run -p 5555:5555 -d --mount type=volume,source=fisco,target=/root/fisco s
 
 主页访问地址: http://ip:5555/index.html
 
+#### 注意
+如果使用gunicorn运行服务，第一次由于多个worker都会初使化，导致创建文件失败，程序异常退出。这时docker restart 一次即可。
+尝试过加 preload 以及 明确调用app.app_context 都不能解决问题。
+
 通过 API 接口上链一条数据
 ```shell
 curl --location 'http://127.0.0.1:5555/sendTrans/rawTrans' \
