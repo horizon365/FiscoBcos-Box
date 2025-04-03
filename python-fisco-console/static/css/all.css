@@ -7,7 +7,7 @@ html,body{
     width:100%;
     height:34px;
     overflow:hidden;
-    color:#fff
+    color: #171414
 }
 .content-nav .title{
     float:left;
@@ -189,7 +189,7 @@ a {
     text-decoration: none;
 }
 .hash-content-info-tran[data-v-4415af24]{
-    background-color:#2a2c3b;
+    background-color:#f9f9f9;
     color:#fff;
     font-size:14px
 }
@@ -312,7 +312,7 @@ html,body{
     }
 .home{
     width:100%;
-    background-color:#2a2c3b
+    background-color:#f9f9f9
 }
 .home-head{
     font-size:0
@@ -612,7 +612,7 @@ table{
     width:100%;
     height:34px;
     overflow:hidden;
-    color:#fff
+    color: #171414
 }
 .content-nav .title{
     float:left;
@@ -623,7 +623,7 @@ table{
     font-size:14px
 }
 .hash-content-info-tran[data-v-4415af24]{
-    background-color:#2a2c3b;
+    background-color:#f9f9f9;
     color:#fff;
     font-size:14px
 }
@@ -927,7 +927,7 @@ html,body{
     min-width: 800px;
 }
 .home{
-    width:100%;background-color:#2a2c3b
+    width:100%;background-color:#f9f9f9
 }
 .home-head{
     font-size:0
@@ -987,8 +987,8 @@ html,body{
     background-color:#3b3e54
 }
 .home-center .el-table .table-style{
-    background-color:#3b3e54;
-    color:#fff;
+    background-color: #f5f5f5;
+    color: #171414;
     text-align:center;
     overflow:hidden;
     text-overflow:ellipsis;
@@ -1028,7 +1028,7 @@ html,body{
     padding-bottom:20px;
     background-color:#3b3e54;
     font-size:14px;
-    color:#fff;
+    color: #171414;
     vertical-align:top
 }
 .home-foot-box,.home-foot-box-nav{
@@ -2064,7 +2064,7 @@ html,body{
     width:100%;
     height:34px;
     overflow:hidden;
-    color:#fff
+    color: #171414
 }
 .content-nav .title{
     float:left;
@@ -2097,7 +2097,7 @@ a {
     text-decoration: none;
 }
 .hash-content-info-tran[data-v-4415af24]{
-    background-color:#2a2c3b;
+    background-color:#f9f9f9;
     color:#fff;
     font-size:14px
 }
@@ -2110,7 +2110,7 @@ a {
     border-top:1px solid #999;
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
-    background-color:#3b3e54
+    background-color:#f9f9f9
 }
 .hash-content-info-tran .content .title[data-v-4415af24]{
     border-bottom:1px solid #999;
@@ -2200,7 +2200,7 @@ a {
     color:#42b983
 }
 .content[data-v-4415af24] .is-top{
-    color:#fff
+    color:#409eff
 }
 .content[data-v-4415af24] .is-active{
     color:#409eff
@@ -2223,7 +2223,7 @@ html,body{
     width:100%;
     height:34px;
     overflow:hidden;
-    color:#fff
+    color: #171414
 }
 .content-nav .title{
     float:left;

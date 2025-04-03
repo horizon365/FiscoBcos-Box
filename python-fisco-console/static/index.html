@@ -17,41 +17,13 @@
     <link rel="icon" href="/gs/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<div id="app" class="web-font">
+<div id="app" class="web-font" style="background-color: #f9f9f9">
     <div style="height: 100%;">
-        <div element-loading-text="数据加载中..." element-loading-background="rgba(0, 0, 0, 0.8)" style="height: 100%;">
+        <div element-loading-text="数据加载中..." element-loading-background="#ffffff" style="height: 100%;">
             <div>
                 <div class="nav-header">
                     <div class="container">
-<!--                        <div class="logo">-->
-<!--                            <a href="./index.html"><img src="./pic/fisco-bcos-logo.3a5e45c.png" class="image" style="width: 170px;"></a>-->
-<!--                        </div>-->
-<!--                        <div class="nav-menu" style="float: left;">-->
-<!--                            <div class="nav-menu-item nav-item" style="display: inline-block; width: 160px; text-align: right;">-->
-<!--                                <span>1</span>-->
-<!--                                <div class="nav-chainType">-->
-
-<!--                                </div>-->
-<!--                                <ul class="select1">-->
-<!--                                    <li style="cursor: default;">-->
-<!--                                        <span class="name">1</span>-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                                <i class="el-icon-caret-bottom icon-up icon">-->
-<!--                                </i>-->
-<!--                                <i class="el-icon-caret-top icon-down icon"></i>-->
-<!--                            </div>-->
-<!--                        </div>-->
                         <div class="nav-menu">
-<!--                            <div class="nav-menu-item nav-item">配置-->
-<!--                                <i class="el-icon-caret-bottom icon-up"></i>-->
-<!--                                <i class="el-icon-caret-top icon-down"></i>-->
-<!--                                <ul class="nav-menu-item-option">-->
-<!--                                    <li class="option">群组配置</li>-->
-<!--                                    <li class="option">节点配置</li>-->
-<!--                                    <li class="option">合约配置</li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
                             <div class="nav-menu-item nav-item">区块链信息
                                 <i class="el-icon-caret-bottom icon-up"></i>
                                 <i class="el-icon-caret-top icon-down"></i>
@@ -61,7 +33,6 @@
                                     <li class="option"><a href="transaction_list.html">查看交易</a></li>
                                 </ul>
                             </div>
-<!--                            <div class="nav-menu-item nav-item">帮助</div>-->
                         </div>
                     </div>
                 </div>
@@ -70,7 +41,7 @@
             <div class="home main">
                 <div class="container">
                     <div class="home-head">
-                        <div element-loading-text="数据加载中..." element-loading-background="rgba(0, 0, 0, 0.8)" class="home-head-data margin-right-10">
+                        <div element-loading-text="数据加载中..." element-loading-background="#ffffff" class="home-head-data margin-right-10" style="background-color: whitesmoke;">
                             <ul>
                                 <li class="lg-width bg-8693f3 margin-right-15 margin-bottom-15">
                                     <a href="block_list.html">
@@ -93,7 +64,7 @@
                                     <span class="home-head-data-content"> {{ pbftView }}</span>
                                 </li>
                             </ul>
-                            <div class="el-loading-mask" style="background-color: rgba(0, 0, 0, 0.8); display: none;">
+                            <div class="el-loading-mask" style="background-color: #ffffff; display: none;">
                                 <div class="el-loading-spinner">
                                     <svg viewBox="25 25 50 50" class="circular">
                                         <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
@@ -102,11 +73,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div element-loading-text="数据加载中..." element-loading-background="rgba(0, 0, 0, 0.8)" class="home-head-chart home-head-data margin-left-10" style="background: #d1dbe5">
+                        <div element-loading-text="数据加载中..." element-loading-background="#ffffff" class="home-head-chart home-head-data margin-left-10" style="background: #f5f5f5">
                             <div id="homeId" style="width: 800px;height:300px;">
 
                             </div>
-                            <div class="el-loading-mask" style="background-color: rgba(0, 0, 0, 0.8); display: none;">
+                            <div class="el-loading-mask" style="background-color: #ffffff; display: none;">
                                 <div class="el-loading-spinner">
                                     <svg viewBox="25 25 50 50" class="circular">
                                         <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
@@ -117,7 +88,7 @@
                         </div>
                     </div>
                     <div class="home-center">
-                        <div class="el-table el-table--fit el-table--enable-row-hover el-table--enable-row-transition" element-loading-text="数据加载中..." element-loading-background="rgba(0, 0, 0, 0.8)">
+                        <div class="el-table el-table--fit el-table--enable-row-hover el-table--enable-row-transition" element-loading-text="数据加载中..." element-loading-background="#ffffff" style="background: #ffffff">
                             <div class="hidden-columns">
                                 <div></div>
                                 <div></div>
@@ -135,16 +106,16 @@
                                     </colgroup>
                                     <thead class="has-gutter">
                                     <tr class="">
-                                        <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf" style="background-color: rgb(59, 62, 84); color: rgb(153, 153, 153); text-align: center; border-color: rgb(102, 102, 102);">
+                                        <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf" style="background-color: rgb(245, 245, 245); color: rgb(153, 153, 153); text-align: center; border-color: rgb(102, 102, 102);">
                                             <div class="cell">节点Id</div>
                                         </th>
-                                        <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf" style="background-color: rgb(59, 62, 84); color: rgb(153, 153, 153); text-align: center; border-color: rgb(102, 102, 102);">
+                                        <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf" style="background-color: rgb(245, 245, 245); color: rgb(153, 153, 153); text-align: center; border-color: rgb(102, 102, 102);">
                                             <div class="cell">当前块高</div>
                                         </th>
-                                        <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf" style="background-color: rgb(59, 62, 84); color: rgb(153, 153, 153); text-align: center; border-color: rgb(102, 102, 102);">
+                                        <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf" style="background-color: rgb(245, 245, 245); color: rgb(153, 153, 153); text-align: center; border-color: rgb(102, 102, 102);">
                                             <div class="cell">pbftView</div>
                                         </th>
-                                        <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf" style="background-color: rgb(59, 62, 84); color: rgb(153, 153, 153); text-align: center; border-color: rgb(102, 102, 102);">
+                                        <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf" style="background-color: rgb(245, 245, 245); color: rgb(153, 153, 153); text-align: center; border-color: rgb(102, 102, 102);">
                                             <div class="cell">节点状态</div>
                                         </th>
                                         <th class="gutter" style="width: 0px; display: none;">
@@ -188,7 +159,7 @@
                             <div class="el-table__column-resize-proxy" style="display: none;">
 
                             </div>
-                            <div class="el-loading-mask" style="background-color: rgba(0, 0, 0, 0.8); display: none;">
+                            <div class="el-loading-mask" style="background-color: #ffffff; display: none;">
                                 <div class="el-loading-spinner">
                                     <svg viewBox="25 25 50 50" class="circular">
                                         <circle cx="50" cy="50" r="20" fill="none" class="path">
@@ -201,18 +172,18 @@
                         </div>
                     </div>
                     <div class="home-foot">
-                        <div class="home-foot-box margin-right-10">
+                        <div class="home-foot-box margin-right-10" style="background-color: whitesmoke;">
                             <div class="home-foot-box-nav">
                                 <div class="left">
                                     <span class="line">
                                     </span>
-                                    <span class="text">区块</span>
+                                    <span class="text" style="color: rgb(153, 153, 153)">区块</span>
                                 </div>
                                 <div class="right">
                                     <a href="./block_list.html"><span class="table-link" style="padding-right: 30px;"> 更多 &gt;</span></a>
                                 </div>
                             </div>
-                            <div element-loading-text="数据加载中..." element-loading-background="rgba(0, 0, 0, 0.8)" class="home-foot-box-content">
+                            <div element-loading-text="数据加载中..." element-loading-background="#ffffff" class="home-foot-box-content">
                                 <ul>
                                     <li class="item" v-for="(todo, i) in block_list">
                                         <div class="left">
@@ -229,7 +200,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="el-loading-mask" style="background-color: rgba(0, 0, 0, 0.8); display: none;">
+                                <div class="el-loading-mask" style="background-color: #ffffff; display: none;">
                                     <div class="el-loading-spinner">
                                         <svg viewBox="25 25 50 50" class="circular">
                                             <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
@@ -239,17 +210,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="home-foot-box margin-left-10">
+                        <div class="home-foot-box margin-left-10" style="background-color: whitesmoke;">
                             <div class="home-foot-box-nav">
                                 <div class="left">
                                     <span class="line"></span>
-                                    <span class="text">交易</span>
+                                    <span class="text" style="color: rgb(153, 153, 153)">交易</span>
                                 </div>
                                 <div class="right">
                                     <a href="transaction_list.html"><span class="table-link" style="padding-right: 30px;"> 更多 &gt;</span></a>
                                 </div>
                             </div>
-                            <div element-loading-text="数据加载中..." element-loading-background="rgba(0, 0, 0, 0.8)" class="home-foot-box-content">
+                            <div element-loading-text="数据加载中..." element-loading-background="#ffffff" class="home-foot-box-content">
                                 <ul>
                                     <li class="item" v-for="(todo, i) in transaction_list">
                                         <div class="left">
@@ -279,7 +250,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="el-loading-mask" style="background-color: rgba(0, 0, 0, 0.8); display: none;">
+                                <div class="el-loading-mask" style="background-color: #ffffff; display: none;">
                                     <div class="el-loading-spinner">
                                         <svg viewBox="25 25 50 50" class="circular">
                                             <circle cx="50" cy="50" r="20" fill="none" class="path">

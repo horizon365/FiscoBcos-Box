@@ -15,7 +15,7 @@ html,body{
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
     padding:30px;
-    background-color:#3b3e54;
+    background-color:#ffffff;
     vertical-align:middle
 }
 .lg-width{
@@ -42,7 +42,7 @@ html,body{
     vertical-align:middle
 }
 .home-head-chart .el-input__inner,.home-head-chart .el-range-input{
-    background-color:#3b3e54;
+    background-color:#ffffff;
     color:#fff
 }
 .el-range-separator{
@@ -61,10 +61,10 @@ html,body{
     margin-top:20px
 }
 .home-center-table{
-    background-color:#3b3e54
+    background-color:#ffffff
 }
 .home-center .el-table .table-style{
-    background-color:#3b3e54;
+    background-color:#ffffff;
     color:#fff;
     text-align:center;
     overflow:hidden;
@@ -93,7 +93,7 @@ html,body{
     white-space:nowrap!important
 }
 .home-center .el-table .el-table__empty-block{
-    background-color:#3b3e54
+    background-color:#ffffff
 }
 .home-foot{
     margin-top:20px;
@@ -103,7 +103,7 @@ html,body{
     display:inline-block;
     width:calc(50% - 10px);
     padding-bottom:20px;
-    background-color:#3b3e54;
+    background-color:#ffffff;
     font-size:14px;
     color:#fff;
     vertical-align:top
@@ -204,7 +204,7 @@ table {
         -webkit-box-sizing:border-box;
         box-sizing:border-box;
         padding:20px;
-        background-color:#3b3e54;
+        background-color:#ffffff;
         vertical-align:middle
     }
     .home-head-data-content{
@@ -246,7 +246,7 @@ table {
         -webkit-box-sizing:border-box;
         box-sizing:border-box;
         padding:10px;
-        background-color:#3b3e54;
+        background-color:#ffffff;
         vertical-align:middle
     }
     .home-head-chart{

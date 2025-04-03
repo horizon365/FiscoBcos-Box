@@ -15,7 +15,7 @@ docker build --platform linux/amd64 -t harbor.cngb.org/cngbdb/fisco_box .
 ```
 # 运行docker
 ```shell
-docker run -p 9518:5555 -d --mount type=volume,source=fisco,target=/root/fisco --name fisco harbor.cngb.org/cngbdb/fisco_box
+docker run -p 9518:5555 -d --mount type=volume,source=fisco,target=/root/fisco --label io.portainer.accesscontrol.teams=cngbdb --name fisco harbor.cngb.org/cngbdb/fisco_box
 ```
 # 修改js中的硬地址,用来匹配nginx代理配置
 ```shell
